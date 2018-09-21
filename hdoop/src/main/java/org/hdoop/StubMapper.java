@@ -20,6 +20,8 @@ public class StubMapper extends Mapper<Object, Text, Text, LongWritable> {
 //			word.set(itr.nextToken());
 //			context.write(word,  new IntWritable(1));
 //		}
+		
+		// git commit
 		String[] words = value.toString().split(" ");
 		for (String word : words) {
 			context.write(new Text(word),  new LongWritable(1));
